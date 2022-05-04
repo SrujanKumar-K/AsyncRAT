@@ -8,5 +8,7 @@ Steps to re-produce:
 4. Click on variable "Key" and copy the entire the content and paste it into input section window of cyberchef
 
 ![image](https://user-images.githubusercontent.com/71969773/166680918-317b2016-0272-47d4-9ba5-249245c53160.png)
-5. To extract the salt value 
+
+5. Inorder to extract the salt value, click on method "Aes256" and follow as per below snippet.
+
 ![image](https://user-images.githubusercontent.com/71969773/166681923-4344e2a0-5e25-4f57-aaeb-f16273d2f72e.png)
