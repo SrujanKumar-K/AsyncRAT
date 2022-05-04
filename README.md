@@ -1,4 +1,4 @@
-# AsynncRAT
+# AsyncRAT
 ######### Extracting AsyncRAT configuration using CyberChef  ##########
 
 Steps to re-produce:
