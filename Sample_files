@@ -1,6 +1,29 @@
 
 1) MD5: dea3149aae31bd4116adba54840af10f
    https://app.any.run/tasks/cb3164c3-dd2c-4f43-90b6-1892fe431540/	
+   
+Regular_expression('User defined','public static string \\w+\\s+\\=[ "0-9a-zA-Z+/=]{12,}',true,true,false,false,false,false,'List matches')
+Find_/_Replace({'option':'Simple string','string':'public static string '},'',true,false,true,false)
+Register('([\\s\\S]*)',true,false,false)
+Filter('Line feed','Key',false)
+Regular_expression('User defined','(?<=\\")(.+?)(?=\\")',true,true,false,false,false,false,'List matches')
+Register('([\\s\\S]*)',true,false,false)
+Derive_PBKDF2_key({'option':'Base64','string':'$R1'},256,50000,'SHA1',{'option':'Hex','string':'bfeb1e56fbcd973bb219022430a57843003d5644d21e62b9d4f180e7e6c33941'})
+Register('([\\s\\S]*)',true,false,false)
+Find_/_Replace({'option':'Regex','string':'.*'},'$R0',false,false,false,true)
+Filter('Line feed','Key',true)
+Subsection('(?<=\\")([0-9a-zA-Z+/=]{32,})(?=\\")',true,true,false)
+Fork('\\n','\\n',false)
+From_Base64('A-Za-z0-9+/=',true)
+To_Hex('None',0)
+Drop_bytes(0,64,false)
+Register('(.{32})(.*)',false,false,false)
+Drop_bytes(0,32,true)
+AES_Decrypt({'option':'Hex','string':'$R2'},{'option':'Hex','string':'$R3'},'CBC','Hex','Raw',{'option':'Hex','string':''},{'option':'Hex','string':''})
+Merge()
+Find_/_Replace({'option':'Regex','string':'$'},'\\nAES_KEY = "$R2"\\nSalt  = "bfeb1e56fbcd973bb219022430a57843003d5644d21e62b9d4f180e7e6c33941"',false,false,false,true)
+
+  
 
 :: Extracted code from DnSpy; which should goes to input section in CyberChef ::
 
@@ -68,7 +91,30 @@ Salt: bfeb1e56fbcd973bb219022430a57843003d5644d21e62b9d4f180e7e6c33941  (HEX_For
 2) MD5: b6dbbded2ca82116c6da9bae34cfa6e9
    https://app.any.run/tasks/3003ed46-457c-4c76-88b5-e0de20f36845/
    
-   // Token: 0x04000001 RID: 1
+Regular_expression('User defined','public static string \\w+\\s+\\=[ "0-9a-zA-Z+/=]{12,}',true,true,false,false,false,false,'List matches')
+Find_/_Replace({'option':'Simple string','string':'public static string '},'',true,false,true,false)
+Register('([\\s\\S]*)',true,false,false)
+Filter('Line feed','Key',false)
+Regular_expression('User defined','(?<=\\")(.+?)(?=\\")',true,true,false,false,false,false,'List matches')
+Register('([\\s\\S]*)',true,false,false)
+Derive_PBKDF2_key({'option':'Base64','string':'$R1'},256,50000,'SHA1',{'option':'UTF8','string':'DcRatByqwqdanchun'})
+Register('([\\s\\S]*)',true,false,false)
+Find_/_Replace({'option':'Regex','string':'.*'},'$R0',false,false,false,true)
+Filter('Line feed','Key',true)
+Subsection('(?<=\\")([0-9a-zA-Z+/=]{32,})(?=\\")',true,true,false)
+Fork('\\n','\\n',false)
+From_Base64('A-Za-z0-9+/=',true)
+To_Hex('None',0)
+Drop_bytes(0,64,false)
+Register('(.{32})(.*)',true,false,false)
+Drop_bytes(0,32,false)
+AES_Decrypt({'option':'Hex','string':'$R2'},{'option':'Hex','string':'$R3'},'CBC','Hex','Raw',{'option':'Hex','string':''},{'option':'Hex','string':''})
+Merge()
+Find_/_Replace({'option':'Regex','string':'$'},'\\nAES_KEY = "$R2"\\nSalt  = "DcRatByqwqdanchun"',false,false,false,true)
+
+   
+   
+                // Token: 0x04000001 RID: 1
 		public static string Por_ts = "SCPH5d+ou7xeC99DTH6uTxbQq5wVkaq/EP2UlwCnUB8EUVvGZeZ8Dd8eLC+C1MitBV9w22rCJknmSG3qTOLhYA==";
 
 		// Token: 0x04000002 RID: 2
