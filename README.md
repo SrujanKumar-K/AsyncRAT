@@ -14,7 +14,8 @@ Steps to re-produce:
 ![image](https://user-images.githubusercontent.com/71969773/166681923-4344e2a0-5e25-4f57-aaeb-f16273d2f72e.png)
 
 
-Please be ensure to select the proper  Salt text format while using the "Derive_PBKDF2_key"
+6. Please be ensure to select the proper  Salt text format while using the "Derive_PBKDF2_key"
+7. 
 ![image](https://user-images.githubusercontent.com/71969773/166691893-10098296-808e-4ca2-8645-5df874be4600.png)
 
 Similarly replicate  the same salt value at the end of Find_/_Replace
